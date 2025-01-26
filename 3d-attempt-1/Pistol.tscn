@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=4 uid="uid://d2adbx4k75cbg"]
+
+[ext_resource type="Script" path="res://pistol.gd" id="1_uirve"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64lew"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uh68x"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -6.54758, 2, 2, 7.54758),
+"format": 34359742465,
+"index_count": 84,
+"index_data": PackedByteArray("AAAGAAQAAAACAAYACgAGAAIACgAJAAYACQAEAAYACQALAAQABQADAAEABQAHAAMACAACAAAACAAKAAIACwAMAAQACwAPAAwABQAIAAsABQABAAgAAQAKAAgAAQADAAoABwALAAkABwAFAAsAAwAJAAoAAwAHAAkADwANAAwADwAOAA0ACAAPAAsACAAOAA8AAAAOAAgAAAANAA4ABAANAAAABAAMAA0A"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AACAPwAAgD8AAIC/AACAPwAAgL8AAIC/AACAPwAAgD8AAIA/AACAPwAAgL8AAIA/AACAvwAAgD8AAIC/AACAvwAAgL8AAIC/AACAvwAAgD8AAIA/AACAvwAAgL8AAIA/AACAP3TzlT4AAIC/AACAv3TzlT4AAIA/AACAP3TzlT4AAIA/AACAv3TzlT4AAIC/AACAvwAAgD/BhdHAAACAPwAAgD/BhdHAAACAP3TzlT7BhdHAAACAv3TzlT7BhdHA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_08ipp"]
+resource_name = "pistol placeholder_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -6.54758, 2, 2, 7.54758),
+"attribute_data": PackedByteArray("AAAgPwAAAD8AACA/AAAAPwAAwD4AAAA/AADAPgAAAD8AAMA+AAAAPwAAID8AAIA+AAAgPwAAgD4AACA/AACAPgAAwD4AAIA+AADAPgAAgD4AAMA+AACAPgAAYD8AAAA/AAAgPwAAQD8AAMA+AABAPwAAAD4AAAA/AADAPgAAQD8AACA/AAAAAAAAYD8AAIA+AAAgPwAAgD8AAMA+AAAAAAAAAD4AAIA+AADAPgAAgD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAAAAAAD8AAIA/AAAAPwAAgD4AAAA/AACAPgAAAD8AAEA/AAAAPwAAQD8AAAA/AABAPwAAID8AAEA/AABgPwAAAD8AACA/AABAPwAAID8AAAA/AAAgPwAAAD8AACA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAEA/AAAAPwAAQD8AAAA/AABAPw=="),
+"format": 34359742487,
+"index_count": 84,
+"index_data": PackedByteArray("AAARAAsAAAAGABEAGwAQAAUAGwAZABAAGgAMABIAGgAfAAwADgAJAAMADgAUAAkAGAAHAAEAGAAcAAcAHwAiAAwAHwArACIADQAWAB0ADQACABYABAAcABgABAAKABwAFQAfABoAFQAPAB8ACAAZABsACAATABkAKQAjACAAKQAmACMAFwAqAB4AFwAnACoAAQAoABgAAQAlACgACwAkAAAACwAhACQA"),
+"material": SubResource("StandardMaterial3D_64lew"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("AACAPwAAgD8AAIC/AACAPwAAgD8AAIC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAgL8AAIA/AACAPwAAgL8AAIA/AACAPwAAgL8AAIA/AACAvwAAgD8AAIC/AACAvwAAgD8AAIC/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAvwAAgD8AAIA/AACAvwAAgD8AAIA/AACAvwAAgD8AAIA/AACAvwAAgL8AAIA/AACAvwAAgL8AAIA/AACAvwAAgL8AAIA/AACAP3TzlT4AAIC/AACAP3TzlT4AAIC/AACAP3TzlT4AAIC/AACAv3TzlT4AAIA/AACAv3TzlT4AAIA/AACAP3TzlT4AAIA/AACAP3TzlT4AAIA/AACAv3TzlT4AAIC/AACAv3TzlT4AAIC/AACAv3TzlT4AAIC/AACAvwAAgD/BhdHAAACAvwAAgD/BhdHAAACAvwAAgD/BhdHAAACAPwAAgD/BhdHAAACAPwAAgD/BhdHAAACAPwAAgD/BhdHAAACAP3TzlT7BhdHAAACAP3TzlT7BhdHAAACAP3TzlT7BhdHAAACAv3TzlT7BhdHAAACAv3TzlT7BhdHAAACAv3TzlT7BhdHA/3///wAA/7////9//3//////////f////38AAP///7////9//3////9//3//f////3///wAA/7////9//3////9//3//f////38AAP///7////9//3////9///8AAP+/AAD/f/9//////////3////9/AAD///+/AAD/f/9/////f/9//3////9///8AAP+/AAD/f/9/////f/9//3////9/AAD///+/AAD/f/9//////////3////9/AAD///+/////f/9/////f/9//3///wAA/3//f////3//f/9///////9//3//////////f////38AAP///78AAP9//3//////////f////3///////78AAP9/////v///////f////3///////7////9/////v///////f////38AAP///7////9/////v///////f////38AAP///78AAP9/////vw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_uh68x")
+
+[node name="Pistol" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.013011, 0, 0)
+script = ExtResource("1_uirve")
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.127387, 0, 1.11365e-08, 0, 0.440448, 0, -1.75024e-08, 0, -0.200204, 0.0167715, -0.101883, 0.609085)
+mesh = SubResource("ArrayMesh_08ipp")
+skeleton = NodePath("")
+
+[node name="Raycast carrier" type="Node3D" parent="."]
+transform = Transform3D(0.999998, 0, 0, 0, 0.999998, 0, 0, 0, 1, 0.743777, 1.24063, 0.0654213)
+
+[node name="Raycast1" type="RayCast3D" parent="Raycast carrier"]
+transform = Transform3D(1.28445, 0, 0, 0, -4.46343e-07, 1.0655, 0, -10.2111, -4.65745e-08, -0.697694, -1.09833, 1.84021)
+collision_mask = 3
+collide_with_areas = true

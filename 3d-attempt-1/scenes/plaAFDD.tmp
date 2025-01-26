@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://jak66ehiwlq4"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_spupj"]
+[ext_resource type="Script" path="res://scenes/camera_holder.gd" id="2_emti7"]
+[ext_resource type="PackedScene" uid="uid://c5l41newys6b8" path="res://scenes/shotgun.tscn" id="3_ylh7h"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bnke3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i4xmr"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_spupj")
+
+[node name="Player_collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_bnke3")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.999953, 0)
+shape = SubResource("CapsuleShape3D_i4xmr")
+
+[node name="Camera Holder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4927, 0)
+script = ExtResource("2_emti7")
+
+[node name="Camera3D" type="Camera3D" parent="Camera Holder"]
+h_offset = 0.34
+v_offset = 0.17
+fov = 90.0
+
+[node name="Weapon Holder" type="Node3D" parent="Camera Holder"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.872131, -1.52383, -1.95924)
+
+[node name="Tester shotty" parent="Camera Holder/Weapon Holder" instance=ExtResource("3_ylh7h")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
